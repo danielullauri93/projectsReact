@@ -54,8 +54,8 @@ React Router: Client-side routing for single-page applications.
 ## 🌟 Contributing
 Feel free to contribute to this repository! If you have ideas for new projects or improvements to existing ones, fork the repo and submit a pull request.
 
-## 🤝 Connect with Me
-## 🌐 Portfolio: https://daniel-ullauri.netlify.app/
-## 💼 LinkedIn: linkedin.com/in/danielullauri93
-## 📧 Email: ullauriochoadaniel@gmail.com
+### 🤝 Connect with Me
+### 🌐 Portfolio: https://daniel-ullauri.netlify.app/
+### 💼 LinkedIn: https://www.linkedin.com/in/danielullauri93/
+### 📧 Email: ullauriochoadaniel@gmail.com
 
