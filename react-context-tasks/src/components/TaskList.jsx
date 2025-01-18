@@ -20,12 +20,16 @@ export default function TaskList() {
             key={task.id}
             className='bg-indigo-900 px-10 py-2 text-white shadow-2xl flex justify-between gap-10 rounded-sm'
           >
-            <div>
+            <div className="flex flex-col gap-2">
               <h4>{task.title}</h4>
               <p>{task.description}</p>
               {/* <h6>{task.id}</h6> */}
               <button
-                className='bg-purple-600 hover:bg-purple-500 py-1 px-3 mt-2'
+                className={`py-0 px-1 mt-1 rounded-sm ${
+                  task.done
+                    ? "bg-red-600 hover:bg-red-500"
+                    : "bg-green-600 hover:bg-green-500"
+                }`}
                 onClick={() => toogleTaskDone(task.id)}
               >
                 {task.done ? "Undone" : "Done"}
