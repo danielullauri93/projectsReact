@@ -1,6 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router';
-import { IoIosAdd } from 'react-icons/io';
+import React from "react";
+import { Link } from "react-router";
+import { IoIosAdd } from "react-icons/io";
 
 export default function Heading() {
   return (

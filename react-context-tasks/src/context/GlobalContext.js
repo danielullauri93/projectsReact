@@ -1,19 +1,19 @@
-import { createContext, useReducer } from 'react';
-import appReducer from '../reducer/AppReducer';
-import { v4 } from 'uuid';
+import { createContext, useReducer } from "react";
+import appReducer from "../reducer/AppReducer";
+import { v4 } from "uuid";
 
 const initialState = {
   tasks: [
     {
       id: 1,
-      title: 'Task 1',
-      description: 'some description',
+      title: "Task 1",
+      description: "some description",
       completed: false,
     },
     {
       id: 2,
-      title: 'Task 2',
-      description: 'another description',
+      title: "Task 2",
+      description: "another description",
       completed: false,
     },
   ],
@@ -27,8 +27,8 @@ export const GlobalContextProvider = ({ children }) => {
 
   const addTask = (task) => {
     dispatch({
-      type: 'ADD_TASK',
-      payload: {...task, id: v4()},
+      type: "ADD_TASK",
+      payload: { ...task, id: v4(), done: false },
     });
     // dispatch es lo que va a modificar el estado
     // type es lo que se dice que accion quiero realizar
@@ -36,11 +36,21 @@ export const GlobalContextProvider = ({ children }) => {
   };
 
   const deleteTask = (id) => {
-    dispatch({ type: 'DELETE_TASK', payload: id });
+    dispatch({ type: "DELETE_TASK", payload: id });
+  };
+
+  const updateTask = (task) => {
+    dispatch({ type: "UPDATE_TASK", payload: task });
+  };
+
+  const toogleTaskDone = (id) => {
+    dispatch({ type: "TOGGLE_TASK_DONE", payload: id });
   };
 
   return (
-    <GlobalContext.Provider value={{ ...state, addTask, deleteTask }}>
+    <GlobalContext.Provider
+      value={{ ...state, addTask, deleteTask, updateTask, toogleTaskDone }}
+    >
       {children}
     </GlobalContext.Provider>
   );

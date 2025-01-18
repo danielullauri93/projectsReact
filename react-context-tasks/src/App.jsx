@@ -1,7 +1,7 @@
-import { Route, Routes } from 'react-router-dom';
-import { Heading, TaskForm, TaskList } from './components';
-import './App.css';
-import { GlobalContextProvider } from './context/GlobalContext';
+import { Route, Routes } from "react-router-dom";
+import { Heading, TaskForm, TaskList } from "./components";
+import "./App.css";
+import { GlobalContextProvider } from "./context/GlobalContext";
 
 // console.log(GlobalContextProvider());
 function App() {
@@ -17,7 +17,6 @@ function App() {
               <Route path="/add" element={<TaskForm />} />
               <Route path="/edit/:id" element={<TaskForm />} />
             </Routes>
-
           </GlobalContextProvider>
         </div>
       </div>
