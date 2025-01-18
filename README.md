@@ -36,10 +36,10 @@ Each project is organized into its own folder for easy navigation. Here's a quic
 projectsReact/
 │
 ├── Shopping-Cart/         # React project demonstrating cart functionality
+├── React-TaskList/        # React project TasksList CRUD with useContext & useReducer
 ├── Redux-Todo-App/        # State management example with Redux
 ├── Zustand-Demo/          # Minimalist state management with Zustand
 ├── Hooks-Playground/      # Examples and custom React Hooks
-├── Tailwind-Dashboard/    # Responsive UI built with Tailwind CSS
 └── API-Integration-Demo/  # Fetching and displaying data from APIs
 ```
 
